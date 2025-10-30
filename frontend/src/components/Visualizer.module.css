@@ -1,0 +1,82 @@
+.container {
+    background: #121826;
+    border: 1px solid #1e2a3a;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-height: 0;
+    height: 100%;
+  }
+  
+  .headerRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .heading {
+    margin: 0;
+    font-size: 16px;
+    color: #c9d7ea;
+    font-weight: 600;
+  }
+  
+  .tabs {
+    display: inline-flex;
+    background: #0e1422;
+    border: 1px solid #1e2a3a;
+    border-radius: 10px;
+    padding: 4px;
+    gap: 4px;
+  }
+  
+  .tab,
+  .tabActive {
+    border: none;
+    background: transparent;
+    color: #9bb0c9;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  
+  .tabActive {
+    background: #1a2436;
+    color: #e8eef7;
+    border: 1px solid #2a3c5f;
+  }
+  
+  .content {
+    flex: 1;
+    min-height: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .heatmap {
+    flex: 1;
+    background: linear-gradient(135deg, #f7fafc 0%, #e8eef7 100%);
+    color: #0b0f17;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .terrain {
+    flex: 1;
+    background: #0b0f17;
+    color: #e8eef7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .placeholderText {
+    font-size: 18px;
+    opacity: 0.85;
+    user-select: none;
+  }
