@@ -62,8 +62,8 @@
     background: linear-gradient(135deg, #f7fafc 0%, #e8eef7 100%);
     color: #0b0f17;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
   }
   
   .terrain {
@@ -79,4 +79,49 @@
     font-size: 18px;
     opacity: 0.85;
     user-select: none;
+  }
+
+  .heatmapToolbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    background: #eef3fb;
+    border-bottom: 1px solid #d9e3f2;
+  }
+
+  .badge {
+    font-size: 12px;
+    color: #0b0f17;
+    background: #ffe08a;
+    border: 1px solid #facc15;
+    border-radius: 6px;
+    padding: 2px 6px;
+  }
+
+  .error {
+    color: #b91c1c;
+    font-size: 12px;
+  }
+
+  .mapStage {
+    position: relative;
+    flex: 1;
+    min-height: 280px;
+    background: #f5f7fb;
+    border-top: 1px solid #d9e3f2;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .point {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(0,0,0,0.06);
+    transform: translate(-50%, -50%);
+    border: 2px solid white;
   }

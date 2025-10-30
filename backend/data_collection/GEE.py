@@ -13,9 +13,14 @@ logging.basicConfig(
 )
 
 try:
+    # --- FIX ---
+    # Add your new, clean Project ID here.
+    # This forces GEE to use your new project, bypassing the blocked "walmart" one.
+    NEW_PROJECT_ID = 'hackx-476713' # <-- PASTE YOUR NEW PROJECT ID HERE
+    
     # Initialize the Earth Engine library.
-    ee.Initialize()
-    logging.info("✅ Google Earth Engine API initialized successfully.")
+    ee.Initialize(project=NEW_PROJECT_ID)
+    logging.info(f"✅ Google Earth Engine API initialized successfully with project: {NEW_PROJECT_ID}.")
 except ee.ee_exception.EEException:
     logging.error("❌ Failed to initialize Earth Engine.")
     logging.error("Please run 'earthengine authenticate' in your terminal.")
@@ -153,3 +158,4 @@ if __name__ == "__main__":
     INPUT_FILE = "delta_features_grid.csv"
     OUTPUT_FILE = "final_enriched_dataset.csv"
     enrich_dataset(INPUT_FILE, OUTPUT_FILE)
+
